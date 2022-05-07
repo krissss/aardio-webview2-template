@@ -1,6 +1,6 @@
-﻿import win.ui;
+import win.ui;
 /*DSG{{*/
-mainForm = win.form(text="wincc-analysis";right=759;bottom=469)
+mainForm = win.form(text="aardio-webview2-template";right=759;bottom=469)
 mainForm.add()
 /*}}*/
 
@@ -10,15 +10,22 @@ var theView  = web.view(mainForm);
  
 // 导出为Javascript中的 aardio 对象
 theView.external = {
-    onCounterUpdate = function(name,value){
-        if(name!==null && value!==null){
-        	return "aardio 返回的值：网页中 React 状态值改变了：value:"+value;
-        } 
+    getResult = function(param){
+        return 'aardio with 传参：' + param; 
     }; 
 }
  
 import wsock.tcp.simpleHttpServer; 
-theView.go(wsock.tcp.simpleHttpServer.startSpaUrl("\web\index.html"),37151)
- 
+
+var url
+if (_STUDIO_INVOKED) {
+	import web.rest.client;
+	url = "http://localhost:3000/web/"
+} else {
+	import wsock.tcp.simpleHttpServer
+	url = wsock.tcp.simpleHttpServer.startUrl("/web/index.html")
+}
+theView.go(url)
+
 mainForm.show();
 win.loopMessage();
