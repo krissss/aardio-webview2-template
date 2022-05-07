@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<project ver="34" name="wincc-analysis" libEmbed="true" icon="..." ui="win" output="wincc-analysis.exe" CompanyName="aardio" FileDescription="wincc-analysis" LegalCopyright="Copyright (C) 作者 2022" ProductName="wincc-analysis" InternalName="wincc-analysis" FileVersion="0.0.0.1" ProductVersion="0.0.0.1" publishDir="/dist/" dstrip="false">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project ver="10" name="aardio-webview2-template" libEmbed="true" icon="..." ui="win" output="wincc-analysis.exe" CompanyName="aardio" FileDescription="aardio-webview2-template" LegalCopyright="Copyright (C) 作者 2022" ProductName="aardio-webview2-template" InternalName="aardio-webview2-template" FileVersion="0.0.0.02" ProductVersion="0.0.0.02" publishDir="/dist/" dstrip="false">
 	<file name="main" path="main.aardio"/>
 	<folder name="窗体" path="forms" comment="" embed="true" local="false" ignored="false"/>
-	<folder name="网页" path="web" embed="true" comment="目录" local="true">
+	<folder name="网页" path="web" embed="true" comment="目录" local="true" ignored="false">
 		<file name="index.html" path="web\index.html" comment="web\index.html"/>
 		<file name="index.js" path="web\index.js" comment="web\index.js"/>
 	</folder>
