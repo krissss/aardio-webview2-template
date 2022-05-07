@@ -21,5 +21,5 @@ pnpm install
 pnpm build
 
 # 然后用 aardio 打开工程
-# 运行
+# 发布
 ```
